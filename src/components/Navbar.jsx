@@ -1,30 +1,33 @@
-import { useState } from "react"
+import { FiMenu, FiX } from 'react-icons/fi';
+import { useState } from 'react';
 
 export const Navbar = () => {
-    //Cerrar sesión, y Perfil, Logo de la App, 
-
     const [openMenu, setOpenMenu] = useState(false);
-
     const toggleMenu = () => {
-        setOpenMenu()
-    }
+        setOpenMenu(!openMenu);
+    };
+
     return (
-        <nav className="bg-white shadow-md p-4 flex justify-between items-center">
+        <nav className="bg-gradient-to-r from-green-500 to-green-700 shadow-md p-4 flex justify-between items-center w-[100%] mx-auto">
             <div className="flex items-center">
-                <img src="/src/assets/images/Logo - Alt.png" alt="Logo" className="h-8 w-8 mr-2" />
-                <span className="text-xl font-bold" > SITAG </span>
+                <img src="/src/assets/images/Logo - Alt.png" alt="Logo" className="h-10 w-10 mr-2 cursor-pointer" />
             </div>
-            <div className="relative">
-                <button className="text-gray-500 focus:outline-none">📄</button>
-                {openMenu && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md">
-                        <ul>
-                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Perfil</li>
-                            <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Cerrar sesión</li>
-                        </ul>
-                    </div>
-                )}
+            <div className={`nav-links duration-500 md:static absolute bg-white md:bg-transparent md:min-h-fit min-h-[60vh] left-0 ${openMenu ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center justify-center md:justify-start px-5`}>
+                <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-white text-base md:text-lg">
+                    
+                    <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><a href="#">Perfil de @Usuario</a></li>
+                    <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><a href="#">Cerrar sesión usuario</a></li>
+
+                </ul>
+            </div>
+            <div className="text-white font-bold text-lg md:text-xl">
+                SITAG
+            </div>
+            <div className="flex items-center gap-6">
+                <button onClick={toggleMenu} className="text-3xl text-white cursor-pointer md:hidden">
+                    {openMenu ? <FiX /> : <FiMenu />}
+                </button>
             </div>
         </nav>
-    )
-}
+    );
+};

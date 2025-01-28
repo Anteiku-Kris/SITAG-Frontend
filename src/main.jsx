@@ -9,6 +9,7 @@ import { AuthLayout } from './features/auth/AuthLayout.jsx';
 import { Profile } from './features/auth/Profile.jsx';
 import { FarmLayout } from './features/farms/FarmLayout.jsx';
 import { FarmScreen } from './features/farms/FarmScreen.jsx';
+import { FinancesScreen } from './features/finances/FinancesScreen.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -22,7 +23,7 @@ createRoot(document.getElementById('root')).render(
       <Route element={<FarmLayout/>}>
         <Route path='farm' element={<FarmScreen/>} />
       </Route>
-
+      <Route path='/finances' element={<FinancesScreen/>}></Route>
       {/* Ruta que agrego para redirigir al usuario al home en caso de que se equivoque */}
       <Route path='*' element={<Navigate to="/" replace />} />
     </Routes>

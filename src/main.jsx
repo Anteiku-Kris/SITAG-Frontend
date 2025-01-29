@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import './index.css';
 
+import { routes } from "./routesConfig.js"
 import { Dashboard } from './features/dashboard/dashboard.jsx';
 import { Login } from './features/auth/Login.jsx';
 import { Register } from './features/auth/Register.jsx';
@@ -10,22 +11,37 @@ import { Profile } from './features/auth/Profile.jsx';
 import { FarmLayout } from './features/farms/FarmLayout.jsx';
 import { FarmScreen } from './features/farms/FarmScreen.jsx';
 import { FinancesScreen } from './features/finances/FinancesScreen.jsx';
+import { DivisionLayout } from "./features/farms/divisions/DivisionLayout.jsx"
+import { DivisionScreen } from "./features/farms/divisions/DivisionScreen.jsx";
+import { DivisionOptions } from "./features/farms/divisions/DivisionOptions.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Dashboard />} />
+
+      <Route path={routes.home} element={<Dashboard />} />
+
       <Route element={<AuthLayout />}>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path={routes.login} element={<Login />} />
+        <Route path={routes.register} element={<Register />} />
+        <Route path={routes.profile} element={<Profile />} />
       </Route>
-      <Route element={<FarmLayout/>}>
-        <Route path='farm' element={<FarmScreen/>} />
+
+      <Route element={<FarmLayout />}>
+        <Route path={routes.farm} element={<FarmScreen />} />
       </Route>
-      <Route path='/finances' element={<FinancesScreen/>}></Route>
-      {/* Ruta que agrego para redirigir al usuario al home en caso de que se equivoque */}
-      <Route path='*' element={<Navigate to="/" replace />} />
+
+      <Route path={routes.division(":id")} element={<DivisionLayout />}>
+        <Route index element={<DivisionScreen />} />
+        <Route path="options" element={<DivisionOptions />} />
+      </Route>
+
+      <Route path={routes.finances} element={<FinancesScreen />} />
+
+      {/* Rutas no encontradas, pronto debo cambiarlas al mensaje de error  */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+
     </Routes>
   </BrowserRouter>
 );
+

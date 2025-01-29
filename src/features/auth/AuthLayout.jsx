@@ -2,8 +2,11 @@ import { Outlet } from 'react-router';
 
 export function AuthLayout() {
     return (
-        <div>
-            <Outlet /> 
-        </div>
+        <>
+
+            <div className="p-4">
+                <Outlet />
+            </div>
+        </>
     );
 }

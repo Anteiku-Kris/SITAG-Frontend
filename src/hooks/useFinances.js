@@ -27,7 +27,6 @@ const reducer = (state, action) => {
     case "ADD_DATA":
       const { category, time, newData } = action.payload;
       const updatedCategoryData = {
-        // ← Renombrado para evitar conflicto
         ...state[category],
         [time]: {
           ...state[category][time],

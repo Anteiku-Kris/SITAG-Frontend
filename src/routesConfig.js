@@ -9,7 +9,12 @@ export const routes = {
 
   finances: "/finances",
 
-  //Sub-enrutamiento
   division: (id) => `/division/${id}`,
   divisionOptions: (id) => `/division/${id}/options`,
+
+  animals: "/animals",
+  activities:"/activities",
+
+  medicines:"/meds"
+
 };

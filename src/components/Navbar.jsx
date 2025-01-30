@@ -16,6 +16,7 @@ export const Navbar = () => {
             <div className={`nav-links duration-500 md:static absolute bg-white md:bg-transparent md:min-h-fit min-h-[60vh] left-0 ${openMenu ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center justify-center md:justify-start px-5`}>
                 <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-white text-base md:text-lg">
                     <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/dashboard">Inicio</Link></li>
+                    <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/meds">Medicines</Link></li>
                     <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/login">Cerrar Sesión</Link></li>
                     <li className="bg-green-900 hover:bg-green-950 text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/profile">Perfil @Usuario</Link></li>
 

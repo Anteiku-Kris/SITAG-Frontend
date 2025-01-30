@@ -15,6 +15,11 @@ import { DivisionLayout } from "./features/farms/divisions/DivisionLayout.jsx"
 import { DivisionScreen } from "./features/farms/divisions/DivisionScreen.jsx";
 import { DivisionOptions } from "./features/farms/divisions/DivisionOptions.jsx";
 
+import { AnimalsScreen } from './features/animals/AnimalsScreen.jsx';
+import { ActivitiesScreen } from './features/activities/ActivitiesScreen.jsx';
+
+import { MedsScreen } from './features/medicines/MedsScreen.jsx';
+
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
@@ -37,6 +42,11 @@ createRoot(document.getElementById("root")).render(
       </Route>
 
       <Route path={routes.finances} element={<FinancesScreen />} />
+
+      <Route path={routes.animals} element={<AnimalsScreen/>}/>
+      <Route path={routes.activities}  element={<ActivitiesScreen/>}/>
+
+      <Route path={routes.medicines} element={<MedsScreen/>}/>
 
       {/* Rutas no encontradas, pronto debo cambiarlas al mensaje de error  */}
       <Route path="*" element={<Navigate to="/" replace />} />

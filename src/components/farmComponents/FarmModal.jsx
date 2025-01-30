@@ -6,16 +6,16 @@ export const FarmModal = ({ newFarm, onClose, onChange, onAdd }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white rounded-lg p-4 w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4">
-                <button
+        <div className="fixed inset-0 backdrop-blur-sm bg-opacity-30 text-center flex justify-center items-center z-50">
+            <div className="bg-white rounded-lg p-4 w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 relative border-1 border-[#126260]">
+               { /*<button
                     onClick={onClose}
-                    className="text-gray-500 hover:text-gray-700 font-bold mb-2"
+                    className="absolute top-2 right-5 text-gray-500 hover:text-gray-700 font-bold text-2xl"
                 >
                     X
-                </button>
+                </button>*/}
                 <form onSubmit={e => handleSubmit(e)}>
-                    <h2 className="text-xl font-bold mb-4">Ponle un nombre a tu finca</h2>
+                    <h2 className="text-xl justify-center  text-[#126260] font-bold mb-5 mt-3">Ponle un nombre a tu finca</h2>
                     <input
                         type="text"
                         name="name"
@@ -24,7 +24,7 @@ export const FarmModal = ({ newFarm, onClose, onChange, onAdd }) => {
                         onChange={onChange}
                         required
                         autoComplete="off"
-                        className="border border-gray-300 rounded-lg py-2 px-4 w-full mb-4"
+                        className="border-1 border-[#16AB76] text-[#126260]  rounded-lg py-2 px-4 w-full mb-4 focus:outline-none focus:ring-1 focus:ring-[#16AB76]"
                     />
                     <input
                         type="text"
@@ -34,7 +34,7 @@ export const FarmModal = ({ newFarm, onClose, onChange, onAdd }) => {
                         onChange={onChange}
                         required
                         autoComplete="off"
-                        className="border border-gray-300 rounded-lg py-2 px-4 w-full mb-4"
+                        className="border-1 border-[#16AB76] text-[#126260] rounded-lg py-2 px-4 w-full mb-4 focus:outline-none focus:ring-1 focus:ring-[#16AB76]"
                     />
                     <input
                         type="text"
@@ -44,21 +44,26 @@ export const FarmModal = ({ newFarm, onClose, onChange, onAdd }) => {
                         onChange={onChange}
                         required
                         autoComplete="off"
-                        className="border border-gray-300 rounded-lg py-2 px-4 w-full mb-4"
+                        className="border-1 border-[#16AB76] text-[#126260] rounded-lg py-2 px-4 w-full mb-4 focus:outline-none focus:ring-1 focus:ring-[#16AB76]"
                     />
-                    <button
+                    <div  className="flex justify-between gap-2"> 
+                        <button
                         type="submit"
-                        className="bg-green-500 text-white py-2 px-4 rounded-lg mr-2"
+                        className="text-white py-2 px-4 rounded-lg mr-2 flex-1"
+                        style={{
+                        background: "linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%)"
+                        }}
                     >
                         Añadir
                     </button>
                     <button
                         type="button"
                         onClick={onClose}
-                        className="bg-gray-500 text-white py-2 px-4 rounded-lg"
+                        className="bg-[#314D4D] text-white py-2 px-4 rounded-lg flex-1"
                     >
                         Cancelar
-                    </button>
+                    </button> 
+                    </div> 
                 </form>
             </div>
         </div>

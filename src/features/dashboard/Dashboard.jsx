@@ -16,14 +16,14 @@ export const Dashboard = () => {
                     <Link to="/" className="flex flex-col md:flex-row items-center justify-center p-4 bg-white shadow-md rounded-md border-2 col-span-1"
                         style={{ borderColor: "#126260" }}>
                         <button
-                            className="flex flex-col md:flex-row items-center justify-center p-4 bg-white col-span-1">
+                            className="flex flex-col md:flex-row items-center justify-center p-4  bg-white col-span-1">
                             <img
                                 src="/src/assets/icons/papel.png"
                                 alt="Ver Resumen"
                                 href={<Link to={`/`}></Link>}
                                 className="h-12 w-12 mb-2 md:mb-0 md:mr-4"
                             />
-                            <span>Ver Resumen</span>
+                            <span className="text-[#314D4D]">Ver Resumen</span>
                         </button>
                     </Link>
                     <Link to={routes.finances} className="flex flex-col md:flex-row items-center justify-center p-4 bg-white shadow-md rounded-md border-2 col-span-1"
@@ -37,7 +37,7 @@ export const Dashboard = () => {
                                 href={<Link to={routes.finances}></Link>}
                                 className="h-12 w-12 mb-2 md:mb-0 md:mr-4"
                             />
-                            <span><Link to={routes.finances}>Ver Finanzas</Link></span>
+                            <span className="text-[#314D4D]"><Link to={routes.finances}>Ver Finanzas</Link></span>
                         </button>
                     </Link>
                     <Link to={routes.farm} className="flex flex-col md:flex-row items-center justify-center p-4 bg-white shadow-md rounded-md border-2 col-span-1 lg:col-span-2" style={{ borderColor: '#126260' }} 
@@ -51,7 +51,7 @@ export const Dashboard = () => {
                                 href={<Link to={routes.farm} ></Link>}
                                 className="h-12 w-12 mb-2 md:mb-0 md:mr-4"
                             />
-                            <span><Link to={routes.farm} >Ver fincas</Link></span>
+                            <span className="text-[#314D4D]"><Link to={routes.farm} >Ver fincas</Link></span>
                         </button>
                     </Link>
                 </div>

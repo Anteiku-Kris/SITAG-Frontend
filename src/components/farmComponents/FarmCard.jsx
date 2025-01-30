@@ -1,16 +1,27 @@
 import { useNavigate } from "react-router";
 import {routes} from "../../routesConfig"
 
-export const FarmCard = ({ finca }) => {
+export const FarmCard = ({ finca, image }) => {
   const navigate = useNavigate();
 
   return (
     <section
-      className="bg-gradient-to-r from-green-700 to-red-800 p-4 rounded-lg shadow-md flex flex-col items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-105"
+      className="bg-gradient-to-r p-4 rounded-lg shadow-md flex flex-col items-start justify-start cursor-pointer transition-transform duration-200 hover:scale-105 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(to left,  #6BBF59 1% , #0B6E4F 50%, #0B6E4F 60%)"
+      }}
       onClick={() => navigate(routes.division(finca.id))} 
     >
-      <article className="mt-2 text-center text-lg font-semibold text-white">
-        {`Nombre: ${finca.name}, Descripción: ${finca.description}`}
+      <img
+        src={image}
+        alt={finca.name}
+        className="absolute bottom-0 right-0 w-20 h-20 object-contain rounded-md"
+        style={{right:"-5px"}}
+      />
+   
+      <article className="mt-2 text-left  font-semibold text-white">
+        <div className="text-lg font-semibold mb-2"> {`${finca.name}`}</div>
+        <div className="text-sm"> {`${finca.description}`}</div>
       </article>
     </section>
   );

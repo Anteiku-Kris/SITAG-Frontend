@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import './index.css';
 
 import { routes } from "./routesConfig.js"
-import { Dashboard } from './features/dashboard/dashboard.jsx';
+import { Dashboard } from './features/dashboard/Dashboard.jsx';
 import { Login } from './features/auth/Login.jsx';
 import { Register } from './features/auth/Register.jsx';
 import { AuthLayout } from './features/auth/AuthLayout.jsx';
@@ -19,6 +19,8 @@ import { AnimalsScreen } from './features/animals/AnimalsScreen.jsx';
 import { ActivitiesScreen } from './features/activities/ActivitiesScreen.jsx';
 
 import { MedsScreen } from './features/medicines/MedsScreen.jsx';
+
+import { SummaryScreen } from './features/summary/SummaryScreen.jsx';
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -47,6 +49,8 @@ createRoot(document.getElementById("root")).render(
       <Route path={routes.activities}  element={<ActivitiesScreen/>}/>
 
       <Route path={routes.medicines} element={<MedsScreen/>}/>
+
+      <Route path={routes.summary} element={<SummaryScreen/>}/>
 
       {/* Rutas no encontradas, pronto debo cambiarlas al mensaje de error  */}
       <Route path="*" element={<Navigate to="/" replace />} />

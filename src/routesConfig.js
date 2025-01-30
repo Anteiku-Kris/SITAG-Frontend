@@ -15,6 +15,7 @@ export const routes = {
   animals: "/animals",
   activities:"/activities",
 
-  medicines:"/meds"
+  medicines:"/meds",
 
+  summary: "/summary"
 };

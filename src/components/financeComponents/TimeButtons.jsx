@@ -5,7 +5,7 @@ export const TimeButtons = ({ time, onClick }) => {
           <button
             key={t}
             className={`py-2 px-4 rounded ${
-              time === t ? "bg-blue-500 text-white" : "bg-gray-300 text-gray-700"
+              time === t ? "bg-blue-500 text-white border-1 border-black" : "bg-gray-300 text-gray-700 border-black border-1"
             }`}
             onClick={() => onClick(t)}
           >

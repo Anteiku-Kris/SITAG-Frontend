@@ -84,7 +84,7 @@ export const FinancesScreen = () => {
                 {showModal && <ModalFinances addData={handleAddData} toggleModal={toggleModal} initialCategory={category} />}
 
                 {showNotification && (
-                    <div className={`fixed bottom-4 right-4 p-4 rounded shadow-lg text-white ${category === "Gastos" ? "bg-red-500" : "bg-green-500"}`}>
+                    <div className={`fixed bottom-4 right-4 p-4 rounded shadow-lg text-white ${category === "Gastos" ? "bg-red-500 border-black" : "bg-green-500 border-black"}`}>
                         {notificationMessage}
                     </div>
                 )}

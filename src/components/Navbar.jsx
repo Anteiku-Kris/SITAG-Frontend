@@ -1,6 +1,7 @@
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { routes } from "../routesConfig";
 
 export const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -10,18 +11,26 @@ export const Navbar = () => {
 
     return (
         <nav
-        className="shadow-md p-4 flex justify-between items-center w-[100%] mx-auto"
-        style={{
-        background: "linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%)"
-        }}>
+            className="shadow-md p-4 flex justify-between items-center w-[100%] mx-auto"
+            style={{
+                background: "linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%)"
+            }}>
             <div className="flex items-center">
                 <img src="/src/assets/images/Logo - Alt2.png" alt="Logo" className="h-10 w-10 mr-2 cursor-pointer" />
             </div>
-            <div className={`nav-links duration-500 md:static absolute bg-white md:bg-transparent md:min-h-fit min-h-[60vh] left-0 ${openMenu ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center justify-center md:justify-start px-5`}>
+            <div className={`nav-links duration-500 md:static absolute bg-white md:bg-transparent md:min-h-fit min-h-[60vh] left-0 z-50 ${openMenu ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center justify-center md:justify-start px-5`}>
                 <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-white text-base md:text-lg">
-                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/dashboard">Inicio</Link></li>
-                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/meds">Medicines</Link></li>
-                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/login">Cerrar Sesión</Link></li>
+
+                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to={routes.home}>Inicio</Link></li>
+
+                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to={routes.medicines}>Medicines</Link></li>
+                    
+                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to={routes.farm}>Fincas</Link></li>
+
+                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to={routes.animals}>Animales</Link></li>
+
+                    <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to={routes.login}>Cerrar Sesión</Link></li>
+
                     <li className="bg-green-900 hover:text-[#C5F099] hover:underline text-white md:bg-transparent md:text-white md:hover:text-white p-2 rounded"><Link to="/profile">Perfil @Usuario</Link></li>
 
                 </ul>

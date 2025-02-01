@@ -1,9 +1,11 @@
 export const routes = {
   home: "/",
 
-  login: "login",
-  register: "register",
-  profile: "profile",
+  dashboard: "/dashboard",
+
+  login: "/login",
+  register: "/register",
+  profile: "/profile",
 
   farm: "/farm",
 
@@ -13,9 +15,9 @@ export const routes = {
   divisionOptions: (id) => `/division/${id}/options`,
 
   animals: "/animals",
-  activities:"/activities",
+  activities: "/activities",
 
-  medicines:"/meds",
+  medicines: "/meds",
 
-  summary: "/summary"
+  summary: "/summary",
 };

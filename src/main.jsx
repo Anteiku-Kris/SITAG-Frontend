@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
 
-      <Route path={routes.home} element={<Dashboard />} />
+      <Route path={routes.home} element={<SummaryScreen />} />
 
       <Route element={<AuthLayout />}>
         <Route path={routes.login} element={<Login />} />
@@ -50,7 +50,7 @@ createRoot(document.getElementById("root")).render(
 
       <Route path={routes.medicines} element={<MedsScreen/>}/>
 
-      <Route path={routes.summary} element={<SummaryScreen/>}/>
+      <Route path={routes.dashboard} element={<Dashboard/>}/>
 
       {/* Rutas no encontradas, pronto debo cambiarlas al mensaje de error  */}
       <Route path="*" element={<Navigate to="/" replace />} />

@@ -17,10 +17,10 @@ export const MedsScreen = () => {
   return (
     <>
       <Navbar />
-      <div className="p-4 flex flex-col items-center">
+      <div className="p-4 flex flex-col items-center bg-[#f8f9fa]">
         <div className="w-full max-w-3xl mx-auto">
-          <div className="relative bg-[#D8FDB3] p-4 rounded-lg shadow-md bg-[url('/src/assets/images/LogoCard.png')] bg-no-repeat bg-[50%] h-40 md:h-48 w-full mx-auto">
-            <div className="absolute inset-0 bg-white/50 rounded-lg flex justify-center items-center">
+          <div className="relative bg-[#D8FDB3] p-4 rounded-lg shadow-md drop-shadow-lg bg-[url('/src/assets/images/LogoCard.png')] bg-no-repeat bg-[50%] h-40 md:h-48 w-full mx-auto transition-transform duration-200 hover:scale-102">
+            <div className="absolute inset-0 rounded-lg flex justify-center items-center">
               <h2 className="text-[#2A4F4D] text-center font-black text-5xl">Añadir acción</h2>
             </div>
           </div>
@@ -31,7 +31,7 @@ export const MedsScreen = () => {
         {["Vaca", "Vaca2", "Vaca2"].map((vaca, index) => (
           <div key={index} className="w-full max-w-3xl mx-auto mt-6">
             <div
-              className="relative bg-[#FFFFFF] p-4 rounded-lg shadow-md flex items-center h-40 cursor-pointer"
+              className="relative bg-[#FFFFFF] p-4 rounded-lg shadow-md drop-shadow-lg flex items-center h-40 cursor-pointer transition-transform duration-200 hover:scale-102"
               onClick={() => openModal({ vaca: vaca, number: "40/2", date: "25/8/09" })}
             >
               <div className="w-1/3 h-full overflow-hidden rounded-lg">

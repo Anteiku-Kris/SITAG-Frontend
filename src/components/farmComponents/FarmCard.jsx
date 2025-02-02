@@ -6,7 +6,7 @@ export const FarmCard = ({ finca, image }) => {
 
   return (
     <section
-      className="bg-gradient-to-r p-4 rounded-lg shadow-md flex flex-col items-start justify-start cursor-pointer transition-transform duration-200 hover:scale-105 relative overflow-hidden"
+      className="bg-gradient-to-r p-4 rounded-lg shadow-md drop-shadow-lg flex flex-col items-start justify-start cursor-pointer transition-transform duration-200 hover:scale-103 relative overflow-hidden"
       style={{
         background: "linear-gradient(to left,  #6BBF59 1% , #0B6E4F 50%, #0B6E4F 60%)"
       }}

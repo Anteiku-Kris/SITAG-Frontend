@@ -4,7 +4,7 @@ import React from "react";
 
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-opacity-30 flex justify-center items-center z-50 ">
-      <div className="bg-white p-6 rounded-lg w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 relative h-120 border-1 border-[#126260]">
+      <div className="bg-[#f8f9fa] p-6 rounded-lg w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 relative h-120 border-1 border-[#126260]">
         <h2 className="text-2xl font-bold text-center text-[#2A4F4D]">Detalles</h2>
         <div className="mt-8">
           <p className="text-xl font-medium text-[#2A4F4D]">Vaca: {modalData.vaca}</p>
@@ -18,7 +18,7 @@ import React from "react";
         <button
             type="button"
             onClick={onClose}
-            className="bg-[#314D4D] mt-30 text-white w-full py-2 px-4 rounded-lg flex-1">
+            className="bg-[#314D4D] mt-30 text-white w-full py-2 px-4 rounded-lg cursor-pointer transition-transform duration-200 hover:scale-102 flex-1">
              Cancelar
         </button> 
       </div>

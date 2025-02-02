@@ -15,11 +15,11 @@ export const ActivitiesScreen = () => {
   };
 
   return (
-    <>
+    <div className="bg-[#f8f9fa] min-h-screen">
       <Navbar />
-      <div className="container mx-auto  px-4 mt-4">
+      <div className="container mx-auto px-4 mt-4">
         <h2 className="text-xl font-bold  justify-center text-center text-[#126260] mb-2">Añade una nueva actividad</h2>
-        <div className="flex justify-center shadow-md items-center border-2 border-[#126260] rounded-lg py-2 w-full mx-auto sm:mx-auto">
+        <div className="flex justify-center shadow-md drop-shadow-lg  items-center border-2 border-[#126260] rounded-lg py-2 w-full mx-auto sm:mx-auto transition-transform duration-300 hover:scale-103 cursor-pointer">
           <button onClick={openModal} className="flex justify-center mx-auto sm:mx-auto items-center w-full py-2">
             <FaPlus className="text-[#126260] text-2xl " />
           </button>
@@ -44,7 +44,7 @@ export const ActivitiesScreen = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-opacity-30 overflow-y-auto">
-          <div className="bg-white rounded-lg shadow-lg w-11/12 max-w-md border-[#16AB76] border-1 p-6 relative mx-auto mt-20 mb-4">
+          <div className="bg-[#f8f9fa] rounded-lg shadow-lg w-11/12 max-w-md border-[#16AB76] border-1 p-6 relative mx-auto mt-20 mb-4">
             <button onClick={closeModal} className="absolute top-2 right-2  text-gray-700 text-xl">
               &times;
             </button>
@@ -52,32 +52,32 @@ export const ActivitiesScreen = () => {
             <form>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2"></label>
-                <input type="text" placeholder="Categoría" className="w-full px-3 py-2 text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" />
+                <input type="text" placeholder="Categoría" className="w-full px-3 py-2 bg-white drop-shadow-lg text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2"></label>
-                <input type="text" placeholder="Actividad" className="w-full px-3 py-2 text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" />
+                <input type="text" placeholder="Actividad" className="w-full px-3 py-2 bg-white drop-shadow-lg text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2"></label>
                 <input type="date" 
                   placeholder="Fecha" 
-                  className="w-full px-3 py-2 text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg"  
+                  className="w-full px-3 py-2 bg-white drop-shadow-lg text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg"  
                   onFocus={(e) => e.target.type = 'date'}
                   onBlur={(e) => !e.target.value && (e.target.type = 'text')}/>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700 font-bold mb-2"></label>
-                <textarea placeholder="Descripción" className="w-full px-3 py-2 text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" ></textarea>
+                <textarea placeholder="Descripción" className="w-full px-3 py-2 bg-white drop-shadow-lg text-[#126260] border-1 border-[#16AB76] focus:outline-none focus:ring-1 focus:ring-[#16AB76] rounded-lg" ></textarea>
               </div>
               <div className="flex justify-between gap-4">
-                <button type="submit" className="bg-green-600 text-white py-2 px-4 flex-1 rounded-lg text-lg" 
+                <button type="submit" className="bg-green-600 text-white py-2 px-4 flex-1 rounded-lg text-lg cursor-pointer transition-transform duration-300 hover:scale-102" 
                 style={{
                   background: "linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%)"
                   }}>
                   Añadir
                 </button>
-                <button type="button" className="bg-[#314D4D] text-white py-2 px-4 flex-1 rounded-lg text-lg" onClick={closeModal}>
+                <button type="button" className="bg-[#314D4D] text-white py-2 px-4 flex-1 rounded-lg text-lg transition-transform duration-300 hover:scale-102 cursor-pointer" onClick={closeModal}>
                   Cancelar
                 </button>
               </div>
@@ -85,6 +85,6 @@ export const ActivitiesScreen = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };

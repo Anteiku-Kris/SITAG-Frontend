@@ -5,7 +5,7 @@ export const Login = () => {
 
     
 return (
-  <div className="flex flex-col items-center justify-center bg-white h-screen overflow-hidden relative">
+  <div className="flex flex-col items-center justify-center bg-[#F6F6F6] h-screen">
   <div className="text-center mt-0.1">
     <div
       className="w-155 h-155 bg-gradient-to-b from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto"

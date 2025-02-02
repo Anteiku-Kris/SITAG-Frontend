@@ -11,13 +11,13 @@ export const DivisionOptions = () => {
   };
 
   return (
-    <>
+    <div className="bg-[#f8f9fa] min-h-screen">
       <h1 className="text-2xl font-bold text-center my-4 text-[#126260]">Administra tu división</h1>
       <section className="px-4 flex flex-wrap justify-center gap-8">
         
-        <div className="w-full md:w-1/2 lg:w-1/3 p-4 ">
+        <div className="w-full md:w-1/2 lg:w-1/3 p-4">
           <div 
-            className="flex flex-col items-center justify-center text-white font-bold py-8 px-12 rounded-lg shadow-lg h-48 md:h-64 cursor-pointer hover:scale-105 transition-transform duration-200"
+            className="flex flex-col drop-shadow-lg items-center justify-center text-white font-bold py-8 px-12 rounded-lg shadow-lg h-48 md:h-64 cursor-pointer hover:scale-105 transition-transform duration-200"
             style={{
               background: "linear-gradient(to right, #00B1AC 0%, #4BC9C5 35%, #71C9C7 55%)"
               }}
@@ -30,7 +30,7 @@ export const DivisionOptions = () => {
 
         <div className="w-full md:w-1/2 lg:w-1/3 p-4">
           <div 
-            className="flex flex-col items-center justify-center text-white font-bold py-8 px-12 rounded-lg shadow-lg h-48 md:h-64 cursor-pointer hover:scale-105 transition-transform duration-200"
+            className="flex flex-col drop-shadow-lg items-center justify-center text-white font-bold py-8 px-12 rounded-lg shadow-lg h-48 md:h-64 cursor-pointer hover:scale-105 transition-transform duration-200"
             style={{
               background: "linear-gradient(to left, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%)"
               }}
@@ -53,6 +53,6 @@ export const DivisionOptions = () => {
         />
       </div>
     </section>
-    </>
+    </div>
   );
 };

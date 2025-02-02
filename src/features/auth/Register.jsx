@@ -4,7 +4,7 @@ import { Button } from "../../components/authComponents/Buttons";
 
 export const Register = () => {
     return (
-        <div className="flex flex-col items-center justify-center bg-white h-screen overflow-hidden relative px-4">
+        <div className="flex flex-col items-center justify-center bg-[#F6F6F6] h-screen overflow-hidden relative px-4">
             <div className="flex justify-center items-center mt-[-50px] sm:mt-[-80px] md:mt-[-100px]">
                 <div
                     className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex items-center justify-center" style={{

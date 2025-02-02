@@ -4,9 +4,9 @@ export const SummaryScreen = () => {
     return (
         <>
             <Navbar />
-            <div className="p-4 flex flex-col items-center">
-            <div className="relative bg-[#D8FDB3] p-4 rounded-lg shadow-md bg-[url('/src/assets/images/LogoCard.png')] bg-no-repeat bg-center w-full max-w-290 mx-auto">
-                <div className="absolute inset-0 bg-white/50 rounded-lg"></div>
+            <div className="p-4 flex flex-col items-center bg-[#f8f9fa] h-screen">
+            <div className="relative bg-[#D8FDB3] shadow-md p-4 rounded-lg drop-shadow-md bg-[url('/src/assets/images/LogoCard.png')] bg-no-repeat bg-center w-full max-w-290 mx-auto transition-transform duration-200 hover:scale-102">
+                <div className="absolute inset-0 rounded-lg"></div>
                 <div className="relative">
                 <h2 className="text-[#2A4F4D] font-bold">Aquí tus Ganancias!</h2>
                 <p className="text-2xl text-[#126260] font-bold">$510.50</p>
@@ -15,12 +15,12 @@ export const SummaryScreen = () => {
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-4 my-4 w-full max-w-290 mx-auto">
-                <div className="bg-[#F5D69D] p-4 rounded-lg shadow-md">
+                <div className="bg-[#F5D69D] p-4 rounded-lg shadow-md drop-shadow-md transition-transform duration-200 hover:scale-102">
                 <p className="font-bold text-[#6D5426]">Ver animales</p>
                 <p className="text-xl text-[#6D5426] font-bold">40</p>
                 <p className="text-sm text-[#6D5426]">animales totales en isletas</p>
                 </div>
-                <div className="bg-[#FFFFFF] p-4 rounded-lg shadow-md">
+                <div className="bg-[#FFFFFF] p-4 rounded-lg shadow-md drop-shadow-md transition-transform duration-200 hover:scale-102">
                 <p className="text-[#F8672E] font-bold">Cantidad de gastos</p>
                 <p className="text-xl font-bold text-[#EF4400]">30</p>
                 <p className="text-sm text-[#F8672E]">gastos este mes</p>

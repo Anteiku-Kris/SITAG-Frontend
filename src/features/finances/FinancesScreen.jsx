@@ -54,9 +54,9 @@ export const FinancesScreen = () => {
     };
 
     return (
-        <>
+        <div className="bg-[#f8f9fa] min-h-screen">
             <Navbar />
-            <section className="flex flex-col p-4 bg-white min-h-screen">
+            <section className="flex flex-col p-4 min-h-screen">
                 <div className="text-center mb-4">
                     <h2 className="text-xl font-bold text-gray-700">Total</h2>
                     <span className="text-lg text-gray-500">
@@ -96,6 +96,6 @@ export const FinancesScreen = () => {
                     />
                 )}
             </section>
-        </>
+        </div>
     );
 };

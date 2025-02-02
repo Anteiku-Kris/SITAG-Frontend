@@ -18,7 +18,7 @@ export function CardActivity({ type }) {
 
   return (
     <div
-      className="mx-4 sm:mx-12 rounded-xl py-4 px-6 border-2  border-[#126260] overflow-hidden cursor-pointer transition-all duration-300"
+      className="mx-4 sm:mx-12 rounded-xl py-4 px-6 border-2 bg-white drop-shadow-lg border-[#126260] overflow-hidden cursor-pointer hover:scale-103 transition-all duration-300"
       onClick={() => setExpanded(!expanded)}
     >
       <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">

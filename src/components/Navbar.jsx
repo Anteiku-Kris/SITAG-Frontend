@@ -57,6 +57,9 @@ export const Navbar = () => {
                 <li 
                     className={`p-2 rounded drop-shadow-lg text-center ${isMobile ? "border-[#126260]" : "border-none"} bg-white hover:underline border-2 text-[#126260] md:bg-transparent md:text-white md:hover:text-white cursor-pointer hover:scale-103 transition-all duration-300`}>
                     <Link to={routes.animals}>Animales</Link>
+                </li><li 
+                    className={`p-2 rounded drop-shadow-lg text-center ${isMobile ? "border-[#126260]" : "border-none"} bg-white hover:underline border-2 text-[#126260] md:bg-transparent md:text-white md:hover:text-white cursor-pointer hover:scale-103 transition-all duration-300`}>
+                    <Link to={routes.finances}>Finanzas</Link>
                 </li>
 
                 <li 

@@ -1,8 +1,8 @@
 import { FarmCard } from '../../components/farmComponents/FarmCard';
-import { FarmModal } from '../../components/farmComponents/FarmModal';
 import { Navbar } from '../../components/Navbar';
 import { useFarms } from '../../hooks/useFarms';
 import { FaPlus } from "react-icons/fa";
+import { Modal } from '../../components/ui/Modal';
 
 export const FarmScreen = () => {
     const { fincas, isModal, setIsModal, newFarm, handleFarm, handleChange } = useFarms();
@@ -40,8 +40,45 @@ export const FarmScreen = () => {
             </section>
 
             {isModal && (
-                <FarmModal newFarm={newFarm} onClose={() => setIsModal(false)} onChange={handleChange} onAdd={handleFarm} />
-            )}
+    <Modal
+        isOpen={isModal}
+        onClose={() => setIsModal(false)}
+        title="Ponle un nombre a tu finca"
+        onSubmit={(e) => {
+            e.preventDefault();
+            handleFarm();
+            setIsModal(false);
+        }}
+    >
+        <input
+            type="text"
+            name="name"
+            placeholder="Nombre de la finca"
+            value={newFarm.name}
+            onChange={handleChange}
+            required
+            className="border-1 border-[#16AB76] text-[#126260] bg-white drop-shadow-lg rounded-lg py-2 px-4 w-full mb-4"
+        />
+        <input
+            type="text"
+            name="location"
+            placeholder="Localización"
+            value={newFarm.location}
+            onChange={handleChange}
+            required
+            className="border-1 border-[#16AB76] text-[#126260] bg-white drop-shadow-lg rounded-lg py-2 px-4 w-full mb-4"
+        />
+        <input
+            type="text"
+            name="description"
+            placeholder="Descripción"
+            value={newFarm.description}
+            onChange={handleChange}
+            required
+            className="border-1 border-[#16AB76] text-[#126260] bg-white drop-shadow-lg rounded-lg py-2 px-4 w-full mb-4"
+        />
+    </Modal>
+)}
         </div>
     );
 };

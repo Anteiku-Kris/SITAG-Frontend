@@ -1,8 +1,8 @@
 export const DivisionModal = ({ newDivision, onClose, onChange, onAdd, handleColorChange }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd(); 
-    onClose(); 
+    onAdd();
+    onClose();
   };
 
   return (
@@ -50,7 +50,7 @@ export const DivisionModal = ({ newDivision, onClose, onChange, onAdd, handleCol
                 className="w-10 h-10 bg-white drop-shadow-lg  rounded-full cursor-pointer transition-transform duration-200 hover:scale-105"
                 style={{ backgroundColor: "#FF5733" }}
               />
-               <button
+              <button
                 type="button"
                 onClick={() => handleColorChange("linear-gradient(to left, rgba(197, 240, 153, 0.20) 1%, #A0E060 100%)")}
                 className="w-10 h-10 bg-white drop-shadow-lg  rounded-full cursor-pointer transition-transform duration-200 hover:scale-105"
@@ -80,4 +80,4 @@ export const DivisionModal = ({ newDivision, onClose, onChange, onAdd, handleCol
       </div>
     </div>
   );
-  };
+};

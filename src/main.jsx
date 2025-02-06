@@ -2,7 +2,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import './index.css';
 
-import { routes } from "./routesConfig.js"
+import { routes } from "./routesConfig.js";
+import { ErrorScreen} from "../src/features/ErrorScreen.jsx"
 import { Dashboard } from './features/dashboard/Dashboard.jsx';
 import { Login } from './features/auth/Login.jsx';
 import { Register } from './features/auth/Register.jsx';
@@ -52,8 +53,7 @@ createRoot(document.getElementById("root")).render(
 
       <Route path={routes.dashboard} element={<Dashboard/>}/>
 
-      {/* Rutas no encontradas, pronto debo cambiarlas al mensaje de error  */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path='*' element={<ErrorScreen/>}/>
 
     </Routes>
   </BrowserRouter>

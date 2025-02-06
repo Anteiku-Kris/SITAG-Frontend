@@ -20,4 +20,6 @@ export const routes = {
   medicines: "/meds",
 
   summary: "/summary",
+
+  error: "/error",
 };

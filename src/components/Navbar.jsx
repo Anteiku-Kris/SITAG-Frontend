@@ -38,7 +38,7 @@ export const Navbar = () => {
             <img src="/src/assets/images/Logo - Alt2.png" alt="Logo" className="h-10 w-10 mr-2 cursor-pointer" />
         </div>
         <div className={`nav-links duration-500 md:static absolute md:bg-transparent md:min-h-fit min-h-[60vh] left-0 z-50 ${openMenu ? 'top-[9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center justify-center md:justify-start px-5 ${isMobile ? "bg-[url('src/assets/images/NavBG.jpg')] bg-cover bg-center" : ""}`}>
-            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6 text-white text-base md:text-lg">
+            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-3 text-white text-base md:text-lg">
                 <li 
                     className={`p-2 rounded drop-shadow-lg text-center ${isMobile ? "border-[#126260]" : "border-none"} bg-white hover:underline border-2 text-[#126260] md:bg-transparent md:text-white md:hover:text-white cursor-pointer hover:scale-103 transition-all duration-300`}>
                     <Link to={routes.home}>Inicio</Link>

@@ -77,6 +77,7 @@ export const FarmScreen = () => {
             required
             className="border-1 border-[#16AB76] text-[#126260] bg-white drop-shadow-lg rounded-lg py-2 px-4 w-full mb-4"
         />
+        <button type="submit" className="bg-Button-gradient text-white py-2 px-4 rounded-lg w-full cursor-pointer drop-shadow-lg transition-transform duration-200 hover:scale-102">Registrar</button>
     </Modal>
 )}
         </div>

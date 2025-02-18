@@ -17,3 +17,8 @@ html {
 body {
   margin: 0;
 }
+
+.bg-Button-gradient {
+  background: linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%);
+}
+

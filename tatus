@@ -1,0 +1,18 @@
+[33mcdd2d12[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdesign[m[33m, [m[1;31morigin/design[m[33m)[m Agregando las dependencias de Axios para el consumo de la API, trabajando en la maquetacion y modelado del consumo de endpoint, editando la pagina de Finanzas
+[33mafee673[m Ultimos arreglos de los modals y botones
+[33m9b1325a[m Se agrego un componente Modal para simplifcar el uso de modales independientes en las paginas de FarmScreen, ActivitiesScreen y AnimalsScreen, ahora las tres paginas utilizan un solo componente en lugar de tres, simplificando el codigo y facilitando la reutilización de componentes, se agrego la ruta de errores y se agrego al navbar el enlace de navegación a la pagina de finanzas
+[33mbb8deef[m Agregando la pagina de redirección, de error, editando las rutas de configuración
+[33m9db95bf[m Retoques a todas las vistas, cambios en el background de todas, mejorado el diseno del navbar
+[33maa6f76c[m Haciendo correcciones en las paginas, modificaciones de las rutas SummayScreen es el nuevo home, modificaciones en la vista de animales -> solo se manejaran vacas, y se diferencain por sexo, navbar ha sido modificado -> se agregaron rutas faltantes al navbar y se corrigio un error en que otros elementos se superponían al Navbar
+[33m7aa3896[m Terminada las ultimas vistas de medicamentos
+[33m512b26a[m Vista de resumen hecha
+[33m64d6de9[m Realizando modificaciones en finanzas, agregando la pagina de Summary, con su respectiva ruta
+[33mf13965f[m Correcion de todas las vistes en diseno, vistas de divisiones hecha
+[33m48c1346[m Se terminaron de agregar los estilos y maquetaciones para las paginas de Animals, DivisionOptions y Activities, se agrego un nuevo Componente de UI CardActivitiesjsx, se agregaron las rutas para la nueva pagina MedsScreen
+[33mb58ae59[m Modifación de archivos de ruta, se creo el archivo routesConfig, en donde se manejan las diferentes importaciones de las rutas, repercutiendo en la modificación del archivo main, también se sigue trabajando en las features, en los archivos de farms, se crearon las ventanas de divisiones y de opciones de divisiones
+[33mfcf94cb[m Agregada la pagina de finanzas (FinancesScreem) con su respectiva ruta, se agregaron los componentes para trabajar diferentes secciones de las paginas, se realizaron instalaciones de librerias para el manejo de graficos en React (chart.js y react-chartjs-2) se desarrollo diseño responsive con un enfoque mobile first en estas vistas, y se crearon las paginas para editar, agregar y eliminar información de finanzas
+[33m25cfdd2[m Se añadieron estilos generales en el archivo de index.css, se ha trabajado en la maquetacion y estilos de la pantalla para fincas farmscreen, se crearon componentes para modales, y un formulario para la añadir fincas, estamos trabajando con el hook useFarm para los archivos FarmCard, FarmModal y FarmScreen, se creo el hook useAuth para manejar la logica de las pantallas de autenticacion, empezando a maquetar la pantalla de divisiones de la finca
+[33m052d7d3[m Login y register con componentes de input y button
+[33m2fbe05f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #1 from Anteiku-Kris/design
+[33m5da4711[m Adding the views and style for the home page, created the NavbarComponent, libraries like React-icons were also installed, so we can see them on the project dependencies
+[33mddca390[m Uploading SITAG frontend base

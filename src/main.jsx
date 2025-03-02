@@ -18,6 +18,7 @@ import { DivisionOptions } from "./features/farms/divisions/DivisionOptions.jsx"
 
 import { AnimalsScreen } from './features/animals/AnimalsScreen.jsx';
 import { ActivitiesScreen } from './features/activities/ActivitiesScreen.jsx';
+import {TransferScreen} from "./features/activities/TransferScreen.jsx";
 
 import { MedsScreen } from './features/medicines/MedsScreen.jsx';
 
@@ -48,6 +49,7 @@ createRoot(document.getElementById("root")).render(
 
       <Route path={routes.animals} element={<AnimalsScreen/>}/>
       <Route path={routes.activities}  element={<ActivitiesScreen/>}/>
+      <Route path={routes.transfer} element={<TransferScreen/>}/>
 
       <Route path={routes.medicines} element={<MedsScreen/>}/>
 

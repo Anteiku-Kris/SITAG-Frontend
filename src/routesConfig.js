@@ -16,6 +16,7 @@ export const routes = {
 
   animals: "/animals",
   activities: "/activities",
+  transfer: "/transfer",
 
   medicines: "/meds",
 

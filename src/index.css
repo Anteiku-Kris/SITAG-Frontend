@@ -18,6 +18,24 @@ body {
   margin: 0;
 }
 
+
+.primary-color {
+  background-color: #2A4F4D;
+}
+
+.secondary-color {
+  background-color: #126260;
+}
+
+.Text-color1 {
+  color: #2A4F4D;
+}
+
+.border-color1{
+  color: #126260;
+}
+
+
 .bg-Button-gradient {
   background: linear-gradient(to bottom, #0B6E4F 15%, #6BBF59 90%, #6BBF59 120%);
 }

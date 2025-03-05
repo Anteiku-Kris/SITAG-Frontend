@@ -43,19 +43,19 @@ export const TransferScreen = () => {
     <div className="bg-[#f8f9fa] min-h-screen">
       <Navbar />
       <div className="container mx-auto px-4 mt-4">
-        <h2 className="text-xl font-bold text-center text-[#126260] mb-2">
+        <h2 className="text-xl font-bold text-center text-[#314D4D] mb-2">
           Seleccionar Animales para Traspaso
         </h2>
         <div className="flex space-x-2 justify-center mb-4">
           <button
             onClick={() => setFilterByFarm("Finca A")}
-            className="bg-green-600 text-white py-2 px-4 rounded-lg"
+            className="bg-[#126260] drop-shadow-lg cursor-pointer shadow-lg transition-transform duration-200 hover:scale-102 text-white py-2 px-4 rounded-lg"
           >
             Finca A
           </button>
           <button
             onClick={() => setFilterByFarm("Finca B")}
-            className="bg-green-600 text-white py-2 px-4 rounded-lg"
+            className="bg-[#126260] drop-shadow-lg cursor-pointer shadow-lg transition-transform duration-200 hover:scale-102 text-white py-2 px-4 rounded-lg"
           >
             Finca B
           </button>
@@ -65,50 +65,51 @@ export const TransferScreen = () => {
           <input
             type="text"
             placeholder="Buscar por ID o Nombre"
-            className="w-full px-3 py-2 bg-white drop-shadow-md text-[#126260] border border-[#16AB76] rounded-lg"
+            className="w-full px-3 py-2 bg-white drop-shadow-md Text-color1 border border-[#16AB76] rounded-lg"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white">
-            <thead>
-              <tr>
-                <th className="px-4 py-2">ID</th>
-                <th className="px-4 py-2">Nombre</th>
-                <th className="px-4 py-2">Especie</th>
-                <th className="px-4 py-2">Finca Actual</th>
-                <th className="px-4 py-2">Seleccionar</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredAnimals.map((animal) => (
-                <tr key={animal.id}>
-                  <td className="border px-4 py-2">{animal.id}</td>
-                  <td className="border px-4 py-2">{animal.name}</td>
-                  <td className="border px-4 py-2">{animal.species}</td>
-                  <td className="border px-4 py-2">{animal.farm}</td>
-                  <td className="border px-4 py-2">
-                    <input
-                      type="checkbox"
-                      checked={selectedAnimals.includes(animal)}
-                      onChange={() => handleAnimalSelect(animal)}
-                    />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="container mx-auto px-4 mt-6">
-          <h2 className="text-xl text-center font-bold text-[#126260] mb-2">
+        <div className="overflow-x-auto rounded-lg shadow-lg drop-shadow-lg bg-white">
+  <table className="min-w-full border-collapse rounded-lg overflow-hidden">
+    <thead className="rounded-lg">
+      <tr className="bg-Button-gradient">
+        <th className="text-white px-4 py-2">ID</th>
+        <th className="text-white px-4 py-2">Nombre</th>
+        <th className="text-white px-4 py-2">Especie</th>
+        <th className="text-white px-4 py-2">Finca Actual</th>
+        <th className="text-white px-4 py-2">Escoger</th>
+      </tr>
+    </thead>
+    <tbody>
+      {filteredAnimals.map((animal) => (
+        <tr key={animal.id} className=" border-b-1 border-color1 last:border-b-0 ">
+          <td className="text-center border-color1 Text-color1 font-medium px-4 py-2">{animal.id}</td>
+          <td className="text-center border-color1 Text-color1 font-medium px-4 py-2">{animal.name}</td>
+          <td className="text-center border-color1 Text-color1 font-medium px-4 py-2">{animal.species}</td>
+          <td className="text-center border-color1 Text-color1 font-medium px-4 py-2">{animal.farm}</td>
+          <td className="text-center border-color1 Text-color1 font-medium px-4 py-2">
+            <input
+            className="cursor-pointer transition-transform duration-200 hover:scale-102"
+              type="checkbox"
+              checked={selectedAnimals.includes(animal)}
+              onChange={() => handleAnimalSelect(animal)}
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+        <div className="container  mx-auto px-4 mt-6">
+          <h2 className="text-xl  text-center font-bold Text-color1 mb-2">
             Animales Seleccionados
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             {selectedAnimals.map((animal) => (
               <div
                 key={animal.id}
-                className="bg-white p-4 rounded-lg shadow-md"
+                className="bg-white border border-color1 p-4 rounded-lg shadow-md drop-shadow-lg cursor-pointer transition-transform duration-200 hover:scale-102"
               >
                 <p>ID: {animal.id}</p>
                 <p>Nombre: {animal.name}</p>
@@ -117,9 +118,9 @@ export const TransferScreen = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center  mt-4">
             <button
-              className="bg-green-600 text-white py-2 px-4 rounded-lg"
+              className="secondary-color drop-shadow-lg cursor-pointer shadow-lg transition-transform duration-200 hover:scale-102  text-white py-2 px-4 rounded-lg"
               onClick={handleConfirmTransfer}
             >
               Confirmar Traspaso
